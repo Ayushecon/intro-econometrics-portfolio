@@ -52,3 +52,6 @@ However, the coefficient is not statistically significant (p = 0.128), so we can
 
 The R-squared is 0.013, meaning that only about 1.3% of the variation in CEO salaries is explained by tenure. This indicates that tenure alone has very low explanatory power and that other factors likely play a more important role in determining CEO compensation.
 
+
+
+
