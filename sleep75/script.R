@@ -1,0 +1,11 @@
+install.packages("wooldridge")
+library("wooldridge")
+data(sleep75)
+head(sleep75)
+mean(sleep75$sleep)
+mean(sleep75$totwrk)
+model_sleep<-lm(sleep~totwrk,data=sleep75)
+summary(model_sleep)
+coef(model_sleep)["totwrk"]
+change_sleep<-coef(model_sleep)["totwrk"]*120
+change_sleep

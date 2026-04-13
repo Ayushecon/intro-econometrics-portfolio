@@ -1,0 +1,13 @@
+library("wooldridge")
+data(countymurders)
+head(countymurders)
+data_1996<-countymurders[countymurders$year==1996,]
+head(data_1996)
+sum(data_1996$murders==0)
+sum(data_1996$execs>=1)
+max(data_1996$execs)
+model_countymurders<-lm(murders~execs,data=data_1996)
+summary(model_countymurders)
+range(fitted(model_countymurders))
+predict(model_countymurders,newdata=data.frame(execs=0))
+0-predict(model_countymurders,newdata=data.frame(execs=0))

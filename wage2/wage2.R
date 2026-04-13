@@ -1,0 +1,15 @@
+library("wooldridge")
+data(wage2)
+head(wage2)
+mean(wage2$wage)
+mean(wage2$IQ)
+sd(wage2$IQ)
+model_wage<-lm(wage~IQ,data=wage2)
+summary(model_wage)
+coef(model_wage)["IQ"]
+changed_wage<-coef(model_wage)["IQ"]*15
+changed_wage
+model_wage2<-lm(log(wage)~IQ,data=wage2)
+summary(model_wage2)
+changed_wage2<-coef(model_wage2)["IQ"]*15
+changed_wage2
